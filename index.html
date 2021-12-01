@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dagbok</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Min dagbok</h1>
+    </header>
+    <main>
+        <div id="diaryContent">
+            <form>
+                <label for="textTitle">Rubrik</label>
+                <textarea id="textTitle"></textarea>
+
+                <label for="textDate">Datum</label>
+                <input type="date" id="textDate">
+
+                <label for="textEntry">Dagens inlägg</label>
+                <textarea id="textEntry"></textarea>
+
+                <button id="saveBtn">Spara</button>
+            </form>
+        </div>
+    </main>
+</body>
+
+</html>

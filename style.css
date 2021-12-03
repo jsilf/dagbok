@@ -3,7 +3,7 @@ body {
     color: rgb(230, 230, 230);
 }
 
-main, header {
+#diaryContent, header {
     display: flex;
     justify-content: center;
 }

@@ -23,7 +23,7 @@ function addEntry() {
     //om min variabel collectedPosts är sann, översätt den till en sträng
     if (collectedPosts) {
         collectedPosts = JSON.parse(collectedPosts);
-    } else { //annars en array
+    } else { //annars en tom array
         collectedPosts = [];
     }
     //pusha mina nya inlägg till mitt objekt
@@ -45,6 +45,11 @@ function renderEntry() {
     //ändra mina inlägg
     if (posts) {
         posts = JSON.parse(posts);
+    } else {
+        let noPosts = document.createElement("h3");
+        noPosts.innerText = "Du har inte skrivit något.";
+        entries.append(noPosts);
+        return;
     }
     //sortera efter datum med sort funktion
     posts.sort(function (a, b) {
@@ -81,7 +86,7 @@ saveBtn.addEventListener("click", (evt) => {
     evt.preventDefault();
     //anropa funktionerna vid klick
     renderEntry();
-    addEntry(textTitle, textDate, textEntry);
+    addEntry();
 
     //töm inputfälten när du klickat på knappen
     document.getElementById("textTitle").value = "";
